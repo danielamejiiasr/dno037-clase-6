@@ -12,7 +12,7 @@
         <script>
             async function todo() {
                 //Voy por un JSON
-                const consulta = await fetch("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson");
+                const consulta = await fetch("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson");
                 const data = await consulta.json();
                 //Declaro variables que parten en cero;
                 let indones = 0;
@@ -48,7 +48,7 @@
                     options: {
                         plugins: {
                             legend: { display: false },
-                            title: { display: true, text: "Terremotos" },
+                            title: { display: true, text: "Total de Terremotos" },
                         }
                     }
                 });
